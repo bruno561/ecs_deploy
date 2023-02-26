@@ -1,0 +1,45 @@
+{
+    "family": "webserver-nodejs",
+    "containerDefinitions": [
+        {
+            "name": "webserver-nodejs",
+            "image": "942870440590.dkr.ecr.us-east-1.amazonaws.com/web-nodejs-app:8b6bebe26b0e137773674f0ba1a12ba448675378",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "webserver-nodejs-3000-tcp",
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/webserver-nodejs",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::942870440590:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::942870440590:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}
