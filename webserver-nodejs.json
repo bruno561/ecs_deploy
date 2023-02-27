@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "webserver-nodejs",
-            "image": "942870440590.dkr.ecr.us-east-1.amazonaws.com/web-nodejs-app:8b6bebe26b0e137773674f0ba1a12ba44867537813",
+            "image": "942870440590.dkr.ecr.us-east-1.amazonaws.com/web-nodejs-app:8b6bebe26b0e137773674f0ba1a12ba448675378",
             "cpu": 0,
             "portMappings": [
                 {
